@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'djangolearn.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'journaldata',
+        'NAME': 'journaldb',
         'USER': 'root',
         'PASSWORD': 'admin'
     }
