@@ -1,7 +1,6 @@
 # forms.py
 from django import forms
 from .models import Journal
-from bootstrap_datepicker.widgets import DatePicker
 
 class DateInput(forms.DateInput):
     input_type='date'
