@@ -8,10 +8,10 @@ class DateInput(forms.DateInput):
 class JournalForm(forms.Form):
 
     day_type_choices = [
-    ("Happy Happy", "happy"),
-    ("Sad", "sad"),
-    ("Meh", "moderate"),
-    ("Angry aaghhh", "angry")
+    ("Happy", "Happy Happy"),
+    ("Sad", "Sad"),
+    ("Moderate", "Meh"),
+    ("Angry", "Angry Aaghhh")
 ]
     title = forms.CharField(max_length=100)
     day_type = forms.ChoiceField(choices= day_type_choices, widget=forms.Select)
