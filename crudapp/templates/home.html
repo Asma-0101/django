@@ -1,0 +1,13 @@
+ {% extends 'authentication/base.html' %}
+
+{% block content %}
+ 
+ <div class="inner cover">
+            <h1 class="cover-heading">Hi, {{request.session.username}}</h1>
+            <p class="lead">This Dummy Journal app is a simple tool to capture your thoughts, ideas, and experiences. Keep reflecting! ^^ </p>
+
+            <a href="{% url 'data' %}" class="btn btn-primary">Show My Entries</a>
+             <a href="{% url 'add_entry' %}" class="btn btn-primary">Add New Entry</a>
+          </div>
+
+          {% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'authentication/base.html' %}
+
+{% block content %}
+<style>
+tr, td, th, table{ border: 2px solid black;
+  border-collapse: collapse;}
+
+
+</style>
+    <h1>Your Entries</h1>
+
+     {% for entry in journal_entries %}
+     </br>
+     <h3>{{ entry.title }}</h3>
+     <table border="2">
+     <tr>
+      <th>Day Type</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+        <td>{{ entry.day_type }}</td>
+        <td>{{ entry.day_date }}</td>
+        <td>{{ entry.description }}</td>
+        <td><a href="{% url 'edit_entry' entry.id %}">Edit</a></td>
+        <td><a href="{% url 'delete_entry' entry.id %}">Delete</a></td> 
+  </tr>
+</table>
+
+  {% endfor %}
+    {% comment %} <ul>
+        {% for entry in Journal %}
+            <li>{{ entry.title }} - {{ entry.day_date }} - {{ entry.day_rate }}</li>
+            <a href="{% url 'edit_book' book.pk %}">Edit</a>
+            <a href="{% url 'delete_book' book.pk %}">Delete</a> 
+        {% endfor %}
+    </ul> {% endcomment %}
+    <a href="{% url 'add_entry' %}">Add Entry</a>
+
+{% endblock %}
